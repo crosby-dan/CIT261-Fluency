@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/main.css">
+    <script src="../scripts/util.js"></script>
+    <script src="../scripts/objectDemo1.js"></script>
+    <script src="../scripts/objectDemo2.js"></script>
+    <title>Dan Crosby CIT 261 Fluency Demonstration - JavaScript Objects</title>
+</head>
+<body>
+<H1>Dan Crosby CIT 261 Fluency Demonstration - JavaScript Objects</H1>
+<button onclick="console.log(myPet);">Click here to create an object.</button>
+<button onclick="SetCurDate();">Show Date</button>
+
+<BR><BR>
+<input type="checkbox" id="barks" name="barks"
+       checked>
+<label for="barks">Barking Dog Warning</label>
+<input type="checkbox" id="scratches" name="scratches"
+       checked>
+<label for="scratches">Scratching Cat Warning</label>
+
+<p id="object1"></p>
+<p id="currentDate"></p>
+<input type="text" id="inputPetName" name="inputPetName">
+<button onclick="CreateCat();">Create Cat</button>
+<button onclick="CreateDog();">Create Dog</button>
+<div class="flex-container">
+    <div class="flex-item">
+        <h2>Cats</h2>
+        <UL id="catObjects"></UL>
+    </div>
+    <div class="flex-item">
+        <H2>Dogs</H2>
+        <UL id="dogObjects"></UL>
+    </div>
+</div>
+
+</body>
+</html>

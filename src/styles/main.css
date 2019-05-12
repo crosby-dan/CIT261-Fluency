@@ -1,0 +1,21 @@
+body {
+    background-image: url("../img/puzzle.jpg");
+    background-repeat: repeat-x;
+    background-color: lightblue;
+}
+
+h1 {
+    font-size: 2.5rem ;
+    color: coral;
+    background-color: aliceblue;
+}
+
+ul {
+    padding-top: 100px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px;
+}
