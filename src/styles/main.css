@@ -19,3 +19,16 @@ ul {
     flex-direction: row;
     border: 2px;
 }
+
+.button {
+    background:    #3d85c6;
+    background:    linear-gradient(#3d85c6, #073763);
+    border-radius: 5px;
+    padding:       6px 6px;
+    color:         #ff0000;
+    display:       inline-block;
+    font:          normal bold 14px/1 "Calibri", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #000000;
+}
+

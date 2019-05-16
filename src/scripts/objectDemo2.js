@@ -1,7 +1,7 @@
 //SuperType constructor function
 function Pets(petName, petType){
-    this.petName = petName,
-    this.petType = petType
+    this.petName = petName;
+    this.petType = petType;
 }
 
 //SuperType prototype
@@ -16,14 +16,15 @@ function Cat(petName, petType, canScratch){
     //Inherit instance properties
     Pets.call(this, petName, petType);
     this.canScratch = canScratch;
+    this.petImage="cat.jpg";
 }
 //Now that everything is defined, we can create the actual Cat javascript Object.
-Cat.prototype = Object.create(Pets.prototype)
+Cat.prototype = Object.create(Pets.prototype);
 
 //In addition to the base properties of Pets, we are adding a getCanScratch getter to the Cat.
 Cat.prototype.getCanScratch = function() {
     return this.canScratch;
-}
+};
 
 //-------------------------------------------------
 //SubType constructor function for a Dog object
@@ -32,6 +33,7 @@ function Dog(petName, petType, canBark){
     //Inherit instance properties
     Pets.call(this, petName, petType);
     this.canBark = canBark;
+    this.petImage="dog.jpg";
 }
 //Now that everything is defined, we can create the actual Dog javascript Object.
 Dog.prototype = Object.create(Pets.prototype)
@@ -76,7 +78,7 @@ function CreateDog() {
     if (sPetName=='')
     {
         alert ("Error, name missing"); return;
-    };
+    }
     var barks=document.getElementById("barks").checked;
 
     var Dog1= new Dog(sPetName, "Dog", true);  // Ralph is a dog who likes to bark a lot.
@@ -87,7 +89,12 @@ function CreateDog() {
 
     var node = document.createElement("LI");                 // Create a <li> node
     var textnode = document.createTextNode(Dog1.getInfo() + " " + warning);         // Create a text node
-    node.appendChild(textnode);                              // Append the text to <li>
+    node.appendChild(textnode);
+    var nodeButton = document.createElement("button");
+    nodeButton.innerHTML="remove";
+    nodeButton.className = "button";
+    node.appendChild(nodeButton);
+    // Append the text to <li>
     document.getElementById("dogObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
 }
 
