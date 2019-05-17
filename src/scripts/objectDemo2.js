@@ -36,7 +36,7 @@ function Dog(petName, petType, canBark){
     this.petImage="dog.jpg";
 }
 //Now that everything is defined, we can create the actual Dog javascript Object.
-Dog.prototype = Object.create(Pets.prototype)
+Dog.prototype = Object.create(Pets.prototype);
 //In addition to the base properties of Pets, we are adding a getCanBark getter to the Dog.
 Dog.prototype.getCanBark = function() {
     return this.canBark;
@@ -56,7 +56,7 @@ function CreateCat() {
     if (sPetName=='')
     {
         alert ("Error, name missing"); return;
-    };
+    }
 
     //Determine if this cat has a scratching problem
     var scratches=document.getElementById("scratches").checked;
