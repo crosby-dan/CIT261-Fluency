@@ -51,23 +51,50 @@ Dog.prototype.getCanBark = function() {
 
 //Based on an HTML button click, create an instance of Cat (which is a sub type of Pets)
 function CreateCat() {
+    //Validate the pet name which must be present
     var sPetName=document.getElementById("inputPetName").value;
     if (sPetName=='')
     {
         alert ("Error, name missing"); return;
     };
+
+    //Determine if this cat has a scratching problem
     var scratches=document.getElementById("scratches").checked;
 
+    //Instantiate the Cat, which inherits from pet
     var Cat1= new Cat(sPetName, "Cat", scratches);  //We are saying that "Tiger" is not the scratching kind of cat by passing false.
-    //console.log(Cat1.getInfo());
-    //console.log("Can Scratch: " + Cat1.getCanScratch());
+
+    console.log(Cat1.getInfo() + " Can Scratch: " + Cat1.getCanScratch());
     var warning="";
     if (Cat1.getCanScratch()) warning="Warning - This cat can scratch!";
 
-    var node = document.createElement("LI");                 // Create a <li> node
+    // Create a new list item to hold the pet
+    var node = document.createElement("LI");
+
+    //Add an image to the pet
+    var petImage = document.createElement("img");
+    petImage.setAttribute("src", "../img/cat.jpg");
+    petImage.setAttribute("height", "100");
+    petImage.setAttribute("width", "100");
+    node.appendChild(petImage);
+
+    // Append the text to <li>
     var textnode = document.createTextNode(Cat1.getInfo() + " " + warning);         // Create a text node
-    node.appendChild(textnode);                              // Append the text to <li>
-    document.getElementById("catObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
+    node.appendChild(textnode);
+
+    //Create a button to remove the pet
+    var nodeButton = document.createElement("button");
+    nodeButton.innerHTML="remove";
+    nodeButton.className = "button";
+    node.appendChild(nodeButton);
+
+    //This will make our remove button work when it is clicked
+    node.addEventListener('click', function(e) {
+        e.currentTarget.remove();
+    }, false);
+
+    // Append the text to the pet list
+    document.getElementById("petObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
 
     //document.getElementById("output").innerHTML="Added a new cat named " + Cat1.getInfo() + " " + warning;
 }
@@ -79,23 +106,44 @@ function CreateDog() {
     {
         alert ("Error, name missing"); return;
     }
+
+    //Determine if this dog has a barking problem
     var barks=document.getElementById("barks").checked;
 
-    var Dog1= new Dog(sPetName, "Dog", true);  // Ralph is a dog who likes to bark a lot.
-    //console.log(Dog1.getInfo());
-    //console.log("Can Bark: " + Dog1.getCanBark());
+    //Instantiate a dog object
+    var Dog1= new Dog(sPetName, "Dog", barks);  // Ralph is a dog who likes to bark a lot.
+
+    //Set variable for warning message as needed
+    console.log(Dog1.getInfo()+" Can Bark: " + Dog1.getCanBark());
     var warning="";
     if (Dog1.getCanBark()) warning="Warning - This dog has a barking problem!";
 
-    var node = document.createElement("LI");                 // Create a <li> node
-    var textnode = document.createTextNode(Dog1.getInfo() + " " + warning);         // Create a text node
+    //Create a list item to hold the pet
+    var node = document.createElement("LI");
+
+    //Add an image to the pet
+    var petImage = document.createElement("img");
+    petImage.setAttribute("src", "../img/dog.jpg");
+    petImage.setAttribute("height", "100");
+    petImage.setAttribute("width", "100");
+    node.appendChild(petImage);
+
+    // Create a text node with the pet name and warning
+    var textnode = document.createTextNode(Dog1.getInfo() + " " + warning);
     node.appendChild(textnode);
+
+    // Add a remove button
     var nodeButton = document.createElement("button");
     nodeButton.innerHTML="remove";
     nodeButton.className = "button";
     node.appendChild(nodeButton);
-    // Append the text to <li>
-    document.getElementById("dogObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
-}
 
+    //This will make our remove button work when it is clicked
+    node.addEventListener('click', function(e) {
+        e.currentTarget.remove();
+    }, false);
+
+    // Append the text to the pet list
+    document.getElementById("petObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
+}
 
