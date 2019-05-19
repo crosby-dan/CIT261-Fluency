@@ -1,0 +1,34 @@
+body {
+    background-image: url("../img/puzzle.jpg");
+    background-repeat: repeat-x;
+    background-color: lightblue;
+}
+
+h1 {
+    font-size: 2.5rem ;
+    color: coral;
+    background-color: aliceblue;
+}
+
+ul {
+    padding-top: 100px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px;
+}
+
+.button {
+    background:    #3d85c6;
+    background:    linear-gradient(#3d85c6, #073763);
+    border-radius: 5px;
+    padding:       6px 6px;
+    color:         #ff0000;
+    display:       inline-block;
+    font:          normal bold 14px/1 "Calibri", sans-serif;
+    text-align:    center;
+    text-shadow:   2px 2px #000000;
+}
+
