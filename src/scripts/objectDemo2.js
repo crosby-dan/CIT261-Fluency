@@ -74,8 +74,8 @@ function CreateCat() {
     //Add an image to the pet
     var petImage = document.createElement("img");
     petImage.setAttribute("src", "../img/cat.jpg");
-    petImage.setAttribute("height", "100");
-    petImage.setAttribute("width", "100");
+    petImage.setAttribute("height", "60");
+    petImage.setAttribute("width", "60");
     node.appendChild(petImage);
 
     // Append the text to <li>
@@ -89,8 +89,8 @@ function CreateCat() {
     node.appendChild(nodeButton);
 
     //This will make our remove button work when it is clicked
-    node.addEventListener('click', function(e) {
-        e.currentTarget.remove();
+    nodeButton.addEventListener('click', function(e) {
+        e.currentTarget.parentNode.remove();
     }, false);
 
     // Append the text to the pet list
@@ -124,8 +124,8 @@ function CreateDog() {
     //Add an image to the pet
     var petImage = document.createElement("img");
     petImage.setAttribute("src", "../img/dog.jpg");
-    petImage.setAttribute("height", "100");
-    petImage.setAttribute("width", "100");
+    petImage.setAttribute("height", "60");
+    petImage.setAttribute("width", "60");
     node.appendChild(petImage);
 
     // Create a text node with the pet name and warning
@@ -139,8 +139,8 @@ function CreateDog() {
     node.appendChild(nodeButton);
 
     //This will make our remove button work when it is clicked
-    node.addEventListener('click', function(e) {
-        e.currentTarget.remove();
+    nodeButton.addEventListener('click', function(e) {
+        e.currentTarget.parentNode.remove();
     }, false);
 
     // Append the text to the pet list
