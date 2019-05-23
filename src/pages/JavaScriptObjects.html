@@ -12,18 +12,29 @@
 <button onclick="SetCurDate();">Show Date</button>
 
 <BR><BR><BR><BR>
-<input type="checkbox" id="barks" name="barks"
-       checked>
-<label for="barks">Barking Dog Warning</label>
-<input type="checkbox" id="scratches" name="scratches"
-       checked>
-<label for="scratches">Scratching Cat Warning</label>
+<fieldset>
+    <label for="inputPetName">Enter pet name</label>
+    <input type="text" id="inputPetName" name="inputPetName">
+    <button onclick="CreateDog();">Create Dog</button>
+    <input type="checkbox" id="barks" name="barks" checked>
+    <label for="barks">Barking Dog Warning</label>
+    <button onclick="CreateCat();">Create Cat</button>
+    <input type="checkbox" id="scratches" name="scratches" checked>
+    <label for="scratches">Scratching Cat Warning</label>
+    <p id="currentDate"></p>
+    <label for="myStyle">Select Display Style</label>
+    <select id="myStyle">
+        <option value="0">Select Formatting</option>
+        <option value="1">Change font color to blue</option>
+        <option value="2">Change font color to red</option>
+        <option value="3">Set font size to 40px</option>
+        <option value="4">Set font size to 14px</option>
+        <option value="5">Set background color coral</option>
+        <option value="6">Clear background color</option>
+    </select>
+</fieldset>
+<script src="../scripts/cssFormatDemo.js"></script>
 
-<p id="object1"></p>
-<p id="currentDate"></p>
-<input type="text" id="inputPetName" name="inputPetName">
-<button onclick="CreateCat();">Create Cat</button>
-<button onclick="CreateDog();">Create Dog</button>
 <h2>Your Pets</h2>
 <UL id="petObjects" class="flex-container"></UL>
 

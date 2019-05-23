@@ -6,7 +6,7 @@ function Pets(petName, petType){
 
 //SuperType prototype
 Pets.prototype.getInfo = function(){
-    return this.petName + " " + this.petType;
+    return this.petName;// + " " + this.petType;
 }
 
 //-------------------------------------------------
@@ -66,7 +66,7 @@ function CreateCat() {
 
     console.log(Cat1.getInfo() + " Can Scratch: " + Cat1.getCanScratch());
     var warning="";
-    if (Cat1.getCanScratch()) warning="Warning - This cat can scratch!";
+    if (Cat1.getCanScratch()) warning="Scratch warning!";
 
     // Create a new list item to hold the pet
     var node = document.createElement("LI");
@@ -116,7 +116,7 @@ function CreateDog() {
     //Set variable for warning message as needed
     console.log(Dog1.getInfo()+" Can Bark: " + Dog1.getCanBark());
     var warning="";
-    if (Dog1.getCanBark()) warning="Warning - This dog has a barking problem!";
+    if (Dog1.getCanBark()) warning="Bark warning!";
 
     //Create a list item to hold the pet
     var node = document.createElement("LI");

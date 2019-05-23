@@ -15,14 +15,21 @@ ul {
 }
 
 .flex-container {
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction: row;
     flex-shrink: initial;
     align-content: flex-start;
-    border: 2px black;
-    padding: 0px;
+    flex-wrap: wrap;
+    padding: 2px;
+    column-count: auto;
+    width:95vw;
+    height:50vw;
 }
 
+.flex-container li{
+    display: block;
+    padding: 6px;
+}
 
 .button {
     background:    #3d85c6;
