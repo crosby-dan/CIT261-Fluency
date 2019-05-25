@@ -53,7 +53,7 @@ Dog.prototype.getCanBark = function() {
 function CreateCat() {
     //Validate the pet name which must be present
     var sPetName=document.getElementById("inputPetName").value;
-    if (sPetName=='')
+    if (sPetName.length=0)
     {
         alert ("Error, name missing"); return;
     }
@@ -70,6 +70,7 @@ function CreateCat() {
 
     // Create a new list item to hold the pet
     var node = document.createElement("LI");
+    node.setAttribute("class","cat")
 
     //Add an image to the pet
     var petImage = document.createElement("img");
@@ -102,7 +103,7 @@ function CreateCat() {
 //Ditto, for Dogs
 function CreateDog() {
     var sPetName=document.getElementById("inputPetName").value;
-    if (sPetName=='')
+    if (sPetName.length=0)
     {
         alert ("Error, name missing"); return;
     }
@@ -120,6 +121,7 @@ function CreateDog() {
 
     //Create a list item to hold the pet
     var node = document.createElement("LI");
+    node.setAttribute("class","dog")
 
     //Add an image to the pet
     var petImage = document.createElement("img");
