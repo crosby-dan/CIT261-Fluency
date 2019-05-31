@@ -9,6 +9,7 @@ function LoadFromDisk() {
     request.responseType = 'json';
     request.send();
     request.onload = function() {
+        console.log ("running Load from disk");
         var jsonObj=request.response;
         var outputField = document.getElementById('myOutput');
         outputField.innerHTML=JSON.stringify(jsonObj);
@@ -17,6 +18,51 @@ function LoadFromDisk() {
     }
 }
 
+function LoadFromWeb() {
+    var request = new XMLHttpRequest();
+    var requestURL = 'http://dummy.restapiexample.com/api/v1/employees'
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        console.log ("running Load from web");
+        var jsonObj=request.response;
+        console.log("Results for test #5");
+        console.log(jsonObj);
+
+        var sel = document.getElementById("output5a")
+
+        for (i=0; i<jsonObj.length; i++) {
+            option = document.createElement('option');
+            option.text = jsonObj[i].employee_name;
+            option.value = jsonObj[i].id;
+            sel.add(option);
+        }
+
+        for (var key in jsonObj[0]) {
+            if (jsonObj[0].hasOwnProperty(key)) {
+                console.log(key + " -> " + jsonObj[0][key]);
+            }
+        }
+    }
+}
+
+function LoadEEFromWeb(id) {
+    console.log ("ID = " + id);
+    var request = new XMLHttpRequest();
+    var requestURL = 'http://dummy.restapiexample.com/api/v1/employee/' + id ;
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        console.log ("running Load from web");
+        var jsonObj=request.response;
+        var outputField = document.getElementById('myOutput6');
+        outputField.innerHTML=JSON.stringify(jsonObj);
+        console.log("Results for test #6");
+        console.log(jsonObj);
+    }
+}
 function ShowValuesFromJSON() {
     var output2 = document.getElementById("myOutput2")
     try {
@@ -32,24 +78,24 @@ function ShowValuesFromJSON() {
         s = s + "\tSuperhero 3 = " + myJSON.members[2].name + "\n";
         output2.innerHTML = s;
 
-        //s= s + "\n\n"
-        //for (x in myJSON) {
-        //
-        //    s += myJSON[x];
-        //}
-
     }
     catch (ex) {
-        output2.innerHTML ="Failed to convert JSON: " + ex.message;
+        output2.innerHTML ="Failed to convert JSON: " + ex.message + "\nTry refreshing this page and running step 1 first."
     }
 }
 
 function createJSONfromForm () {
 
-    var output3 = document.getElementById("myOutput3")
+    var output3 = document.getElementById("myOutput3");
     var obj = new Object();
-    var member = new Object();
-
-
-
+    for (i=0;i<3;i++) {
+        var member = new Object();
+        member.name=document.getElementById("f" + (i+1) + "Name").value;
+        member.age =document.getElementById("f" + (i+1) + "Age").value;
+        obj[i]=member;
+    }
+    var obj2 = new Object();
+    obj2 = { "members":obj};
+    console.log(obj2);
+    output3.innerHTML=JSON.stringify(obj2);
 }

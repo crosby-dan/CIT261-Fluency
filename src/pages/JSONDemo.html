@@ -8,10 +8,10 @@
 </head>
 <body>
 <H1>Dan Crosby CIT 261 JSON Demo</H1>
-<H2>Featuring JSON Parse, JSON.Stringify</H2>
+<BR><BR><BR>
+<H2>Featuring JSON Parse, JSON.Stringify, and AJAX Loading of JSON from a web service.</H2>
 
-
-<BR><BR><BR><BR>
+<BR>
 <fieldset>
     <h2>Test #1 - Load JSON from disk and display as string</h2>
     <button onclick="LoadFromDisk();">Run Test #1</button>
@@ -26,7 +26,7 @@
 
 <fieldset>
     <h2>Test #3 - Directly access some properties in the JSON and output them.</h2>
-    <button onclick="ShowValuesFromJSON();">Run Test #2</button>
+    <button onclick="ShowValuesFromJSON();">Run Test #3</button>
     <BR><BR>
     <textarea rows="6" cols="90" id="myOutput2">
     Results will appear here.
@@ -34,7 +34,7 @@
 </fieldset>
 
 <fieldset>
-    <H2>Please provide info for 3 friends.</H2>
+    <H2>Test #4 - Fill in data for friends and then click run test to create JSON from form data.</H2>
     <label for="f1Name">Enter friend name 1</label>
     <input type="text" id="f1Name" name="f1Name">
     <label for="f1Age">Approximate Age</label>
@@ -51,12 +51,33 @@
     <input type="text" id="f3Name" name="f3Name">
     <label for="f3Age">Approximate Age</label>
     <input type="text" id="f3Age" name="f3Age">
+    <BR>
+    <button onclick="createJSONfromForm();">Run test #4</button>
+
     <textarea rows="6" cols="90" id="myOutput3">
     Results will appear here.
     </textarea>
     </fieldset>
 
-<button onclick="createJSONfromForm();">Convert JSON object to String</button>
+<BR><BR>
+<fieldset>
+    <h2>Test #5 - Load JSON from rest webservice (http://dummy.restapiexample.com/api/v1/employees')</h2>
+    <button onclick="LoadFromWeb();">Run Test #5</button>
+    <BR><BR>
+    <label for="output5a">Employee list</label>
+    <select id="output5a"></select>
+</fieldset>
+
+<BR><BR>
+<fieldset>
+    <h2>Test #6 - Load a specific employee from web service (http://dummy.restapiexample.com/api/v1/employee/$id')</h2>
+    <button onclick="LoadEEFromWeb(output5a.value);">Run Test #6</button>
+    <BR><BR>
+    <textarea rows="6" cols="90" id="myOutput6">
+    Test 6 results will appear here.
+    </textarea>
+</fieldset>
+
 <script src="../scripts/JSONDemo.js"></script>
 
 </body>
