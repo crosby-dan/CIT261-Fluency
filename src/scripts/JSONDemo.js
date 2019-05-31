@@ -20,7 +20,7 @@ function LoadFromDisk() {
 
 function LoadFromWeb() {
     var request = new XMLHttpRequest();
-    var requestURL = 'dummy.restapiexample.com/api/v1/employees'
+    var requestURL = 'https://dummy.restapiexample.com/api/v1/employees'
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
@@ -50,7 +50,7 @@ function LoadFromWeb() {
 function LoadEEFromWeb(id) {
     console.log ("ID = " + id);
     var request = new XMLHttpRequest();
-    var requestURL = 'dummy.restapiexample.com/api/v1/employee/' + id ;
+    var requestURL = 'https://dummy.restapiexample.com/api/v1/employee/' + id ;
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
