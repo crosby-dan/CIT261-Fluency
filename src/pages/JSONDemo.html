@@ -61,7 +61,7 @@
 
 <BR><BR>
 <fieldset>
-    <h2>Test #5 - Load JSON from rest webservice (dummy.restapiexample.com/api/v1/employees')</h2>
+    <h2>Test #5 - Load JSON from rest webservice (dummy.restapiexample.com/api/v1/employees')   Note: Server does not suppport CORS.</h2>
     <button onclick="LoadFromWeb();">Run Test #5</button>
     <BR><BR>
     <label for="output5a">Employee list</label>
@@ -70,13 +70,35 @@
 
 <BR><BR>
 <fieldset>
-    <h2>Test #6 - Load a specific employee from web service (dummy.restapiexample.com/api/v1/employee/$id')</h2>
+    <h2>Test #6 - Load a specific employee from web service (dummy.restapiexample.com/api/v1/employee/$id')   Note: Server does not suppport CORS.</h2>
     <button onclick="LoadEEFromWeb(output5a.value);">Run Test #6</button>
     <BR><BR>
     <textarea rows="6" cols="90" id="myOutput6">
     Test 6 results will appear here.
     </textarea>
 </fieldset>
+
+<fieldset>
+    <h2>Test #7 - Load JSON from rest webservice (GET https://pokeapi.co/api/v2/pokemon/')</h2>
+    <button onclick="LoadPokemonsFromWeb();">Run Test #7</button>
+    <BR><BR>
+    <label for="output7">Dad Joke List</label>
+    <select id="output7"></select>
+</fieldset>
+
+<BR><BR>
+<fieldset>
+    <h2>Test #8 - Load a specific employee from web service (https://pokeapi.co/api/v2/pokemon/$id')</h2>
+    <button onclick="LoadPokemonFromWeb(output7.value);">Run Test #8</button>
+    <BR><BR>
+    <textarea rows="6" cols="90" id="myOutput8">
+    Test 8 results will appear here.
+    </textarea>
+</fieldset>
+
+
+
+
 
 <script src="../scripts/JSONDemo.js"></script>
 

@@ -20,7 +20,7 @@ function LoadFromDisk() {
 
 function LoadFromWeb() {
     var request = new XMLHttpRequest();
-    var requestURL = 'https://dummy.restapiexample.com/api/v1/employees'
+    var requestURL = 'http://dummy.restapiexample.com/api/v1/employees'
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
@@ -47,10 +47,44 @@ function LoadFromWeb() {
     }
 }
 
+function LoadPokemonsFromWeb() {
+    var request = new XMLHttpRequest();
+    var requestURL = 'https://pokeapi.co/api/v2/pokemon/'
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        console.log ("running Load Pokemon from web");
+        var jsonObj=request.response;
+        console.log("Results for test #7");
+        console.log(jsonObj);
+
+        console.log("test output");
+        console.log(jsonObj.results[5].name);
+        var sel = document.getElementById("output7");
+
+        for (i=0; i<jsonObj.results.length; i++) {
+            console.log("test output");
+            console.log(jsonObj.results[i].name);
+            option = document.createElement('option');
+            option.text = jsonObj.results[i].name;
+            option.value = i+1;
+            sel.add(option);
+        }
+
+        for (var key in jsonObj[0]) {
+            if (jsonObj[0].hasOwnProperty(key)) {
+                console.log(key + " -> " + jsonObj[0][key]);
+            }
+        }
+    }
+}
+
+
 function LoadEEFromWeb(id) {
     console.log ("ID = " + id);
     var request = new XMLHttpRequest();
-    var requestURL = 'https://dummy.restapiexample.com/api/v1/employee/' + id ;
+    var requestURL = 'http://dummy.restapiexample.com/api/v1/employee/' + id ;
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
@@ -63,6 +97,25 @@ function LoadEEFromWeb(id) {
         console.log(jsonObj);
     }
 }
+
+function LoadPokemonFromWeb(id) {
+    console.log ("ID = " + id);
+    var request = new XMLHttpRequest();
+    var requestURL = 'https://pokeapi.co/api/v2/pokemon/' + id ;
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        console.log ("running Load from web");
+        var jsonObj=request.response;
+        var outputField = document.getElementById('myOutput8');
+        outputField.innerHTML=JSON.stringify(jsonObj);
+        console.log("Results for test #8");
+        console.log(jsonObj);
+    }
+}
+
+
 function ShowValuesFromJSON() {
     var output2 = document.getElementById("myOutput2")
     try {
