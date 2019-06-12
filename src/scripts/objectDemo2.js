@@ -94,6 +94,20 @@ function CreateCat() {
         e.currentTarget.parentNode.remove();
     }, false);
 
+
+    // Add a store button
+    var nodeButton = document.createElement("button");
+    nodeButton.innerHTML="store";
+    nodeButton.className = "store";
+    node.appendChild(nodeButton);
+
+    //This will make our remove button work when it is clicked
+    nodeButton.addEventListener('click', function(e) {
+        localStorage.setItem("PetHotel",Cat1)
+        e.currentTarget.parentNode.remove();
+    }, false);
+
+
     // Append the text to the pet list
     document.getElementById("petObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
 
@@ -145,7 +159,18 @@ function CreateDog() {
         e.currentTarget.parentNode.remove();
     }, false);
 
+    // Add a store button
+    var nodeButton = document.createElement("button");
+    nodeButton.innerHTML="store";
+    nodeButton.className = "store";
+    node.appendChild(nodeButton);
+
+    //This will make our remove button work when it is clicked
+    nodeButton.addEventListener('click', function(e) {
+        localStorage.setItem("PetHotel",Dog1)
+        e.currentTarget.parentNode.remove();
+    }, false);
+
     // Append the text to the pet list
     document.getElementById("petObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
 }
-
