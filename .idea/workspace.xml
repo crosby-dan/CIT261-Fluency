@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="Finished steps 7 &amp; 8">
-      <change afterPath="$PROJECT_DIR$/src/scripts/objectDemo.js" afterDir="false" />
+    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/cat.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/cat.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/dog.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/dog.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objectDemo2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/objectDemo2.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -264,7 +259,7 @@
       <workItem from="1559968991724" duration="82000" />
       <workItem from="1560205788554" duration="9000" />
       <workItem from="1560261764342" duration="900000" />
-      <workItem from="1560352678352" duration="9164000" />
+      <workItem from="1560352678352" duration="9464000" />
     </task>
     <task id="LOCAL-00001" summary="Before DOM work">
       <created>1558012441069</created>
@@ -364,11 +359,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559873528637</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Intermediate update for local storage - pet hotel supports one pet.">
+      <created>1560365731855</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1560365731855</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114525000" />
+    <option name="totallyTimeSpent" value="114825000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -381,9 +383,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49880096" visible="true" weight="0.16717096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49880096" visible="true" weight="0.16717096" />
       <window_info id="Structure" order="1" sideWeight="0.50119907" side_tool="true" weight="0.29425114" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -405,7 +406,7 @@
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -479,7 +480,8 @@
     <MESSAGE value="Removed https" />
     <MESSAGE value="Added HTTPS again" />
     <MESSAGE value="Finished steps 7 &amp; 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished steps 7 &amp; 8" />
+    <MESSAGE value="Intermediate update for local storage - pet hotel supports one pet." />
+    <option name="LAST_COMMIT_MESSAGE" value="Intermediate update for local storage - pet hotel supports one pet." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/css/main.xsl" />
