@@ -11,7 +11,7 @@ h1 {
 }
 
 ul {
-    padding-top: 100px;
+    padding-top: 25px;
 }
 
 .flex-container {
@@ -21,8 +21,7 @@ ul {
     align-content: flex-start;
     flex-wrap: wrap;
     padding: 2px;
-    column-count: auto;
-    width:95vw;
+    column-count: 2;
     height:50vw;
 }
 
@@ -37,9 +36,75 @@ ul {
     border-radius: 5px;
     padding:       6px 6px;
     color:         #ff0000;
-    display:       inline-block;
+    display:       block;
     font:          normal bold 14px/1 "Calibri", sans-serif;
     text-align:    center;
     text-shadow:   2px 2px #000000;
 }
 
+.column {
+    float: left;
+    width: 70%;
+    border-color: #FFF;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.pethomeimg {
+    max-height: 150px;
+    max-width: 150px;
+}
+
+#hotel,#timeout {
+   display: none;
+}
+.button2 {
+    -moz-box-shadow:inset 0 1px 0 0 #fff6af;
+    -webkit-box-shadow:inset 0 1px 0 0 #fff6af;
+    box-shadow:inset 0 1px 0 0 #fff6af;
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
+    background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
+    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
+    background-color:#ffec64;
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+    border:1px solid #ffaa22;
+    display:inline-block;
+    cursor:pointer;
+    color:#333333;
+    font-size:15px;
+    font-weight:bold;
+    padding:6px 24px;
+    text-decoration:none;
+    text-shadow:0 1px 0 #ffee66;
+}
+.button2:hover {
+    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
+    background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
+    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
+    background-color:#ffab23;
+}
+.button2:active {
+    position:relative;
+    top:1px;
+}
+
+.pettitle {
+    color: #e0dfdc;
+    background: #556677;
+    letter-spacing: .1em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0,0,0,0.9);
+}

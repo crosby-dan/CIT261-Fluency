@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
     <script src="../scripts/util.js"></script>
-    <script src="../scripts/objectDemo.js"></script>
     <title>Dan Crosby CIT 261 Fluency Demonstration - JavaScript Objects</title>
 </head>
 <body>
@@ -36,12 +35,30 @@
     <label for="styleCats">change cats</label>
     <input type="checkbox" id="styleDogs" name="change dogs" checked>
     <label for="styleDogs">change dogs</label>
-    <button onclick="RetrieveStoredPets();">Retrieve pets</button>
 </fieldset>
 <script src="../scripts/cssFormatDemo.js"></script>
 
-<h2>Your Pets</h2>
-<UL id="petObjects" class="flex-container"></UL>
+<div class="row">
+    <div class="column">
+        <H2>Pets at home</H2>
+        <UL id="petObjectsHome" class="flex-container"></UL>
+        </div>
+    <div class="column2">
+        <div id="hotel">
+            <H2 id="hotelmessage">Pets at Pet Hotel</H2>
+            <img src="../img/pethotel.jpg" class="pethomeimg" alt="Image of pet hotel">
+            <button class="button2" onclick="RetrievePetsFromHotel();">Retrieve pets from hotel</button>
+        </div>
+        <div id="timeout">
+            <H2 id="timeoutmessage">Pet on timeout</H2>
+            <img src="../img/pettimeout.jpg" class="pethomeimg" alt="Image of pet on timeout">
+            <button class="button2" onclick="RetrievePetFromTimeout();">Retrieve pet from timeout</button>
+        </div>
+        <UL id="petObjectsHotel" class="flex-container"></UL>
+        <UL id="petObjectsTimeOut" class="flex-container"></UL>
+    </div>
+</div>
+<script src="../scripts/objectDemo.js"></script>
 
 </body>
 </html>

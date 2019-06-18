@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="">
+    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="Intermediate update for local storage - pet hotel supports one pet.">
+      <change afterPath="$PROJECT_DIR$/src/img/pethotel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/pettimeout.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/objectDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/objectDemo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,7 +27,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
+            <state relative-caret-position="374">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
@@ -31,7 +36,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/JSONDemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
+            <state relative-caret-position="1377">
               <caret line="81" column="88" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="88" />
             </state>
           </provider>
@@ -59,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="44" />
+            <state relative-caret-position="335">
+              <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -68,8 +73,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="135" selection-start-line="135" selection-end-line="135" />
+            <state relative-caret-position="123">
+              <caret line="89" column="11" lean-forward="true" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -77,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+            <state relative-caret-position="192">
+              <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -102,10 +107,21 @@
       <find>1</find>
       <find>run test</find>
       <find>http</find>
+      <find>addpetto</find>
+      <find>there is already</find>
+      <find>&lt;br&gt;</find>
+      <find>fore</find>
+      <find>placing</find>
+      <find>column</find>
+      <find>in timeout</find>
+      <find>on time</find>
+      <find>px;</find>
+      <find>0px</find>
     </findStrings>
     <replaceStrings>
       <replace>2</replace>
       <replace>3</replace>
+      <replace>0</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -121,7 +137,6 @@
         <option value="$PROJECT_DIR$/src/scripts/main.js" />
         <option value="$PROJECT_DIR$/src/scripts/objectDemo1.js" />
         <option value="$PROJECT_DIR$/src/scripts/util.js" />
-        <option value="$PROJECT_DIR$/src/styles/main.css" />
         <option value="$PROJECT_DIR$/src/scripts/cssFormatDemo.js" />
         <option value="$PROJECT_DIR$/web/login.html" />
         <option value="$PROJECT_DIR$/index.html" />
@@ -131,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/scripts/objectDemo2.js" />
         <option value="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" />
         <option value="$PROJECT_DIR$/src/scripts/objectDemo.js" />
+        <option value="$PROJECT_DIR$/src/styles/main.css" />
       </list>
     </option>
   </component>
@@ -145,6 +161,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -191,7 +208,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -207,9 +223,9 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
@@ -259,7 +275,9 @@
       <workItem from="1559968991724" duration="82000" />
       <workItem from="1560205788554" duration="9000" />
       <workItem from="1560261764342" duration="900000" />
-      <workItem from="1560352678352" duration="9464000" />
+      <workItem from="1560352678352" duration="40431000" />
+      <workItem from="1560722078517" duration="599000" />
+      <workItem from="1560868252618" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="Before DOM work">
       <created>1558012441069</created>
@@ -366,11 +384,25 @@
       <option name="project" value="LOCAL" />
       <updated>1560365731855</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Intermediate update for local storage - pet hotel supports one pet.">
+      <created>1560365837305</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1560365837305</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Intermediate update for local storage - pet hotel supports one pet.">
+      <created>1560365871264</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1560365871264</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114825000" />
+    <option name="totallyTimeSpent" value="147486000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -383,8 +415,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49880096" visible="true" weight="0.16717096" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49880096" visible="true" weight="0.17170954" />
       <window_info id="Structure" order="1" sideWeight="0.50119907" side_tool="true" weight="0.29425114" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -403,10 +436,10 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32850242" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.32850242" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -521,19 +554,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/styles/main.css">
+    <entry file="file://$PROJECT_DIR$/src/img/barkingdog.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/meancat.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo2.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="32" lean-forward="true" selection-start-line="3" selection-start-column="32" selection-end-line="3" selection-end-column="32" />
+        <state relative-caret-position="358">
+          <caret line="176" selection-start-line="176" selection-end-line="176" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
+        <state relative-caret-position="374">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/JSONDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="81" column="88" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/json/superheroes.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -545,40 +594,24 @@
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/json/superheroes.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/barkingdog.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/meancat.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo2.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1083">
-          <caret line="176" selection-start-line="176" selection-end-line="176" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/JSONDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="81" column="88" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="43" column="48" lean-forward="true" selection-start-line="43" selection-start-column="48" selection-end-line="44" />
+        <state relative-caret-position="335">
+          <caret line="59" column="6" lean-forward="true" selection-start-line="59" selection-start-column="6" selection-end-line="59" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="109" column="1" lean-forward="true" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="135" selection-start-line="135" selection-end-line="135" />
+        <state relative-caret-position="123">
+          <caret line="89" column="11" lean-forward="true" selection-start-line="89" selection-start-column="11" selection-end-line="89" selection-end-column="11" />
         </state>
       </provider>
     </entry>

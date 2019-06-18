@@ -4,14 +4,35 @@ function Pets(petName, petType){
     this.petType = petType;
 }
 
+//Run this after all DOM elements are loaded so that we can display any local storage cache.
 document.addEventListener("DOMContentLoaded", function(){
     console.log("Page loaded");
+
+    //If there are already pets in the hotel, we need to make this visible and show the count.
+    var hotel = localStorage.getItem("PetHotel");
+    if (hotel>"") {
+        hotel=JSON.parse(hotel);
+        if (hotel.length>0) {
+            document.getElementById("hotel").style.display="block";
+            document.getElementById("hotelmessage").innerHTML=hotel.length + " pet(s) in hotel.";
+        }
+    }
+    //If there are already pets in the hotel, we need to make this visible and show the count.
+    var petTimeout = localStorage.getItem("PetTimeout");
+    if (petTimeout>"") {
+        pet = JSON.parse(petTimeout);
+        console.log("Checking object " + pet.petName);
+        if (pet) {
+            document.getElementById("timeoutmessage").innerHTML=pet.petName + " is on timeout!";
+            document.getElementById("timeout").style.display = "block";
+        }
+    }
 });
 
 //SuperType prototype - this function applies to dogs and cats
 Pets.prototype.getInfo = function(){
     return this.petName;// + " " + this.petType;
-}
+};
 
 //-------------------------------------------------
 //SubType constructor function for a Cat object
@@ -52,7 +73,7 @@ Dog.prototype = Object.create(Pets.prototype);
 //In addition to the base properties of Pets, we are adding a getCanBark getter to the Dog.
 Dog.prototype.getCanBark = function() {
     return this.canBark;
-}
+};
 
 //In addition to the base properties of Pets, we are adding a custom method to identify the image for a dog.
 Dog.prototype.getImage = function() {
@@ -66,23 +87,24 @@ Dog.prototype.getImage = function() {
 function createPet(type) {
     //Validate the pet name which must be present
     var sPetName=document.getElementById("inputPetName").value;
-    if (sPetName=="")
+    if (sPetName.length===0)
     {
         alert ("Error, name missing"); return;
     }
+    var pet;
 
     switch (type) {
-        case "Cat" : var pet = new Cat(sPetName,"Cat",false); break;
-        case "ScratchingCat" : var pet = new Cat(sPetName,"Cat",true); break;
-        case "Dog" : var pet = new Dog(sPetName,"Dog",false); break;
-        case "BarkingDog" : var pet = new Dog(sPetName,"Dog",true); break;
+        case "Cat" : pet = new Cat(sPetName,"Cat",false); break;
+        case "ScratchingCat" : pet = new Cat(sPetName,"Cat",true); break;
+        case "Dog" : pet = new Dog(sPetName,"Dog",false); break;
+        case "BarkingDog" : pet = new Dog(sPetName,"Dog",true); break;
         default:
             alert("Invalid pet type."); return;
     }
-    addPetToHome(pet);
+    addPetToList(pet,"petObjectsHome");
 }
 
-function addPetToHome(pet) {
+function addPetToList(pet,list) {
     // Create a new list item to hold the pet
     var node = document.createElement("LI");
 
@@ -106,12 +128,14 @@ function addPetToHome(pet) {
     petImage.setAttribute("width", "90");
     node.appendChild(petImage);
 
+
     // Append the text to <li>
     var textnode = document.createTextNode(pet.getInfo());         // Create a text node
     node.appendChild(textnode);
+    var nodeButton;
 
     //Create a button to remove the pet
-    var nodeButton = document.createElement("button");
+    nodeButton = document.createElement("button");
     nodeButton.innerHTML="Sell Pet";
     nodeButton.className = "button";
     node.appendChild(nodeButton);
@@ -121,56 +145,117 @@ function addPetToHome(pet) {
         e.currentTarget.parentNode.remove();
     }, false);
 
-    // Add a store button
-    var nodeButton = document.createElement("button");
-    nodeButton.innerHTML="Day Care";
-    nodeButton.className = "store";
+    // Add a timeout button
+    nodeButton = document.createElement("button");
+    nodeButton.innerHTML="Timeout";
+    nodeButton.className = "button";
     node.appendChild(nodeButton);
 
-    //This will make our store button work when it is clicked
+    //This will make our timeout button work when it is clicked
     nodeButton.addEventListener('click', function(e) {
-        if (localStorage.getItem("PetHotel")>"") {
-            alert ("There is already a pet in your hotel.   Operation failed.");
+        if (localStorage.getItem("PetTimeout")>"") {
+            alert ("Please reconsider placing two bad pets in the same timeout spot.");
+            document.getElementById("timeout").style.display="inline";
             return;
         }
 
-        localStorage.setItem("PetHotel",JSON.stringify(pet));
-        console.log("local storage PetHotel updated to: " + localStorage.getItem("PetHotel"));
+        localStorage.setItem("PetTimeout",JSON.stringify(pet));
+        document.getElementById("timeoutmessage").innerHTML=pet.petName + " is on timeout!";
+        document.getElementById("timeout").style.display="inline";
+        console.log("local storage PetTimeout updated to: " + localStorage.getItem("PetTimeout"));
         e.currentTarget.parentNode.remove();
     }, false);
 
 
-    // Append the text to the pet list
-    document.getElementById("petObjects").appendChild(node);     // Append <li> to <ul> with id="myList"
+    // Add a hotel button
+    nodeButton = document.createElement("button");
+    nodeButton.innerHTML="Hotel";
+    nodeButton.className = "button";
+    node.appendChild(nodeButton);
 
-    //document.getElementById("output").innerHTML="Added a new cat named " + Cat1.getInfo() + " " + warning;
+    //This will make our hotel button work when it is clicked
+    nodeButton.addEventListener('click', function(e) {
+        //Make an array of pets with one element
+        var pets=[];
+        pets.push(pet);
 
+        //Add pets already in the hotel to the array
+        hotel=localStorage.getItem("PetHotel");
+        if (hotel>"") {
+            hotel=JSON.parse(hotel);
+            hotel.forEach(function(item) {
+                pets.push(item);
+            });
+        }
+        //Save array of pets to localstorage
+        localStorage.setItem("PetHotel",JSON.stringify(pets));
+        document.getElementById("hotelmessage").innerHTML=pets.length + " pet(s) in hotel.";
+        document.getElementById("hotel").style.display="inline";
+        e.currentTarget.parentNode.remove();
+    }, false);
+
+    // Append the node to the designated list
+    document.getElementById(list).appendChild(node);     // Append <li> to <ul> with id="myList"
 }
-function RetrieveStoredPets() {
-   var hotel=localStorage.getItem("PetHotel");
 
-   if (hotel=="") {
-       alert("You have no pets in the hotel");
-       return;
-   }
+function RetrievePetFromTimeout() {
+    var petTimeout = localStorage.getItem("PetTimeout");
 
-   pet =JSON.parse(hotel);
-   console.log ("Retrieved from hotel: " + pet);
-   if (!pet instanceof Pets) {
-       alert("The hotel is empty.");
-   }
-   else {
-       if (pet.petType=="Dog") {
-            newPet=new Dog(pet.petName,pet.petType,pet.canBark);
-       }
-       else {
-           newPet=new Cat(pet.petName,pet.petType,pet.canScratch);
-       }
+    if (petTimeout === "" || petTimeout == null) {
+        alert("You do not have a pet in timeout.");
+        return;
+    }
 
-       console.log("Retrieving " + newPet.petName);
-       addPetToHome(newPet);
-       //Clear out the hotel
-       localStorage.setItem("PetHotel","");
-   }
+    pet = JSON.parse(petTimeout);
+    console.log("Timeout has ended for: " + pet);
+    if (!pet instanceof Pets) {
+        alert("You do not have a pet in timeout.");
+    } else {
+        console.log(pet);
+        if (pet.petType === "Dog") {
+            newPet = new Dog(pet.petName, pet.petType, pet.canBark);
+        } else {
+            newPet = new Cat(pet.petName, pet.petType, pet.canScratch);
+        }
 
+        document.getElementById("timeout").style.display="none";
+        //console.log("Retrieving " + newPet.petName);
+        addPetToList(newPet,"petObjectsHome");
+
+        //Clear out the hotel
+        localStorage.setItem("PetTimeout", "");
+    }
+}
+
+    function RetrievePetsFromHotel() {
+        var hotel = localStorage.getItem("PetHotel");
+
+        if (hotel === "") {
+            alert("You have no pets in the hotel");
+            return;
+        }
+        else
+        {
+            hotel=JSON.parse(hotel);
+            hotel.forEach(function(pet) {
+                console.log("Retrieved from hotel: " + pet);
+
+                if (!pet instanceof Pets) {
+                    console.log("skipping retrieving invalid pet from hotel");
+                }
+                else
+                {
+                    if (pet.petType === "Dog") {
+                        newPet = new Dog(pet.petName, pet.petType, pet.canBark);
+                    } else {
+                        newPet = new Cat(pet.petName, pet.petType, pet.canScratch);
+                    }
+                    console.log("Retrieving " + newPet.petName);
+                    addPetToList(newPet, "petObjectsHome");
+                }
+            });
+        }
+    document.getElementById("hotel").style.display="none";
+    //Clear out the hotel
+    localStorage.setItem("PetHotel", "");
 }
