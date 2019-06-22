@@ -1,22 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="Additional work on mousestart, mouseend, and animations.">
-      <change afterPath="$PROJECT_DIR$/src/pages/LawnGame.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/canvasDemo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/styles/canvas.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/puzzle.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/JSONDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/JSONDemo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objectDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/objectDemo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objectDemo2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
-    </list>
+    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,20 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/scripts/JSONDemo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
+            <state relative-caret-position="182">
+              <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/scripts/canvasDemo.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -298,7 +283,7 @@
       <workItem from="1560352678352" duration="40431000" />
       <workItem from="1560722078517" duration="599000" />
       <workItem from="1560868252618" duration="1266000" />
-      <workItem from="1560966962228" duration="49604000" />
+      <workItem from="1560966962228" duration="49877000" />
     </task>
     <task id="LOCAL-00001" summary="Before DOM work">
       <created>1558012441069</created>
@@ -426,11 +411,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560873879019</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Additional work on mousestart, mouseend, and animations.">
+      <created>1561167505418</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1561167505418</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197261000" />
+    <option name="totallyTimeSpent" value="197534000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -653,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/canvasDemo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="103" column="12" selection-start-line="103" selection-start-column="12" selection-end-line="103" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -669,8 +654,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/JSONDemo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="148" column="26" selection-start-line="148" selection-start-column="26" selection-end-line="148" selection-end-column="26" />
+        <state relative-caret-position="182">
+          <caret line="147" column="8" selection-start-line="147" selection-start-column="8" selection-end-line="147" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/canvasDemo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="31" selection-end-column="8" />
         </state>
       </provider>
     </entry>
