@@ -20,7 +20,7 @@ function LoadFromDisk() {
 
 function LoadFromWeb() {
     var request = new XMLHttpRequest();
-    var requestURL = 'http://dummy.restapiexample.com/api/v1/employees'
+    var requestURL = 'http://dummy.restapiexample.com/api/v1/employees';
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
@@ -30,7 +30,7 @@ function LoadFromWeb() {
         console.log("Results for test #5");
         console.log(jsonObj);
 
-        var sel = document.getElementById("output5a")
+        var sel = document.getElementById("output5a");
 
         for (i=0; i<jsonObj.length; i++) {
             option = document.createElement('option');
@@ -49,7 +49,7 @@ function LoadFromWeb() {
 
 function LoadPokemonsFromWeb() {
     var request = new XMLHttpRequest();
-    var requestURL = 'https://pokeapi.co/api/v2/pokemon/'
+    var requestURL = 'https://pokeapi.co/api/v2/pokemon/';
     request.open('GET', requestURL);
     request.responseType = 'json';
     request.send();
@@ -79,7 +79,6 @@ function LoadPokemonsFromWeb() {
         }
     }
 }
-
 
 function LoadEEFromWeb(id) {
     console.log ("ID = " + id);
@@ -115,15 +114,14 @@ function LoadPokemonFromWeb(id) {
     }
 }
 
-
 function ShowValuesFromJSON() {
-    var output2 = document.getElementById("myOutput2")
+    var output2 = document.getElementById("myOutput2");
     try {
         output2.innerHTML=document.getElementById("myOutput").innerHTML;
         var myJSON = JSON.parse(document.getElementById("myOutput").innerHTML);
-        var s = "";  //We will use this to accumulate the output
+        s = "";  //We will use this to accumulate the output
 
-        var t = myJSON["squadName"];
+        //var t = myJSON["squadName"];
         s = "squadName property = " + myJSON.squadName + "\n";
         s = s + "homeTown property = " + myJSON.homeTown + "\n";
         s = s + "\tSuperhero 1 = " + myJSON.members[0].name + "\n";
@@ -140,14 +138,14 @@ function ShowValuesFromJSON() {
 function createJSONfromForm () {
 
     var output3 = document.getElementById("myOutput3");
-    var obj = new Object();
+    var obj =new Object();
     for (i=0;i<3;i++) {
-        var member = new Object();
+        var member =new Object();
         member.name=document.getElementById("f" + (i+1) + "Name").value;
         member.age =document.getElementById("f" + (i+1) + "Age").value;
         obj[i]=member;
     }
-    var obj2 = new Object();
+    var obj2 =new Object();
     obj2 = { "members":obj};
     console.log(obj2);
     output3.innerHTML=JSON.stringify(obj2);

@@ -59,6 +59,14 @@ Cat.prototype.getImage = function() {
         return "meancat.jpg";
 };
 
+//In addition to the base properties of Pets, we are adding a custom method to identify the audio file for a cat.
+Cat.prototype.getAudio = function() {
+    if (!this.getCanScratch())
+        return "cat-meow.mp3";
+    else
+        return "tom-cat.mp3";
+};
+
 //-------------------------------------------------
 //SubType constructor function for a Dog object
 //-------------------------------------------------
@@ -77,11 +85,20 @@ Dog.prototype.getCanBark = function() {
 
 //In addition to the base properties of Pets, we are adding a custom method to identify the image for a dog.
 Dog.prototype.getImage = function() {
-    console.log("getCanBark=" + this.getCanBark());
+    //console.log("getCanBark=" + this.getCanBark());
     if (!this.getCanBark())
         return "dog.jpg";
     else
         return "barkingdog.jpg";
+};
+
+//In addition to the base properties of Pets, we are adding a custom method to identify the image for a dog.
+Dog.prototype.getAudio = function() {
+    //console.log("getCanBark=" + this.getCanBark());
+    if (!this.getCanBark())
+        return "puppy-barking.mp3";
+    else
+        return "dog-barking.mp3";
 };
 
 function createPet(type) {
@@ -104,6 +121,20 @@ function createPet(type) {
     addPetToList(pet,"petObjectsHome");
 }
 
+//function to rotate image
+var looper;
+var degrees = 0;
+function rotateImage(el,speed) {
+    var elem =document.getElementById(el);
+    elem.style.transform = "rotate("+degrees+"deg)";
+    looper = setTimeout('rotateImage(\''+el+'\','+speed+')',speed);
+    //console.log("degrees=" + degrees);
+    degrees++;
+    if(degrees > 60){
+        degrees = -60;
+    }
+}
+
 function addPetToList(pet,list) {
     // Create a new list item to hold the pet
     var node = document.createElement("LI");
@@ -120,17 +151,31 @@ function addPetToList(pet,list) {
         return;
     }
 
-    console.log ("Pet image is " + pet.getImage());
+    //console.log ("Pet image is " + pet.getImage());
     //Add an image to the pet
     var petImage = document.createElement("img");
     petImage.src="../img/" + pet.getImage();
     petImage.setAttribute("height", "90");
     petImage.setAttribute("width", "90");
+    petImage.setAttribute("id",pet.getInfo()+"img");
     node.appendChild(petImage);
 
+    node.setAttribute("id",pet.getInfo());
+
+    //Code to animate pet when mouse comes over it.
+    node.addEventListener('mouseenter', function(e) {
+        console.log ("event fired " + e);
+        var elem = document.getElementById(e.target.id +"img");
+        elem.style.transition="all 0.4s ease-in 0s";
+        elem.style.height="100px";
+        elem.style.width="100px";
+        rotateImage(e.target.id +"img",23);
+    }, false);
 
     // Append the text to <li>
-    var textnode = document.createTextNode(pet.getInfo());         // Create a text node
+    var textnode = document.createTextNode(pet.getInfo());
+
+    // Create a text node with the name of the pet
     node.appendChild(textnode);
     var nodeButton;
 
@@ -195,7 +240,12 @@ function addPetToList(pet,list) {
     }, false);
 
     // Append the node to the designated list
-    document.getElementById(list).appendChild(node);     // Append <li> to <ul> with id="myList"
+    document.getElementById(list).appendChild(node);
+    var audioplayer=document.getElementById("mp3Audio");
+    audioplayer.src="../audio/" + pet.getAudio();
+    var audiocontroller=document.getElementById("audioController");
+    audiocontroller.load();
+    audiocontroller.play();
 }
 
 function RetrievePetFromTimeout() {

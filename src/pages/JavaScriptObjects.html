@@ -3,16 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/canvas.css">
     <script src="../scripts/util.js"></script>
     <title>Dan Crosby CIT 261 Fluency Demonstration - JavaScript Objects</title>
 </head>
 <body>
 <H1>Dan Crosby CIT 261 Pets Site</H1>
-<H2>Featuring CSS Class properties via javascript, Javascript Objects, and DOM manipulation via javascript</H2>
-
-<button onclick="SetCurDate();">Show Date</button>
-
-<BR><BR><BR><BR>
 <fieldset>
     <label for="inputPetName">Enter pet name</label>
     <input type="text" id="inputPetName" name="inputPetName">
@@ -35,6 +31,11 @@
     <label for="styleCats">change cats</label>
     <input type="checkbox" id="styleDogs" name="change dogs" checked>
     <label for="styleDogs">change dogs</label>
+    <button id="showtheater" onclick="toggleTheater();">Show/Hide Pet Theater</button>
+    <button onclick="window.open('/fluency/pages/LawnGame.html');">Clean the back yard</button>
+    <audio id="audioController">
+        <source id="mp3Audio" type="audio/mpeg">
+    </audio>
 </fieldset>
 <script src="../scripts/cssFormatDemo.js"></script>
 
@@ -44,6 +45,15 @@
         <UL id="petObjectsHome" class="flex-container"></UL>
         </div>
     <div class="column2">
+        <div id="wrapper">
+            <H2 id="videomessage">Pet Theater</H2>
+            <video id="tomjerry" width="160px" controls>
+                <source src="../img/Tom_And_Jerry.mp4" type="video/mp4">
+            </video><br>
+            <button id="playpause" onclick="playPause()">Play/Pause</button>
+            <button id="playbig" onclick="playerBig()">Big</button>
+            <button id="playsmall" onclick="playerCompact()">Small</button>
+        </div>
         <div id="hotel">
             <H2 id="hotelmessage">Pets at Pet Hotel</H2>
             <img src="../img/pethotel.jpg" class="pethomeimg" alt="Image of pet hotel">
@@ -54,11 +64,10 @@
             <img src="../img/pettimeout.jpg" class="pethomeimg" alt="Image of pet on timeout">
             <button class="button2" onclick="RetrievePetFromTimeout();">Retrieve pet from timeout</button>
         </div>
-        <UL id="petObjectsHotel" class="flex-container"></UL>
-        <UL id="petObjectsTimeOut" class="flex-container"></UL>
     </div>
 </div>
 <script src="../scripts/objectDemo.js"></script>
+<script src="../scripts/html5Video.js"></script>
 
 </body>
 </html>
