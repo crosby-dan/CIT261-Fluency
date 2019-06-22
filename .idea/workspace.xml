@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="Updated link to LawnGame">
+      <change beforePath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -55,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
+            <state relative-caret-position="112">
+              <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -96,7 +96,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;Dog</find>
       <find>1</find>
       <find>run test</find>
       <find>http</find>
@@ -126,6 +125,7 @@
       <find>red</find>
       <find>myYard</find>
       <find>innerHTML</find>
+      <find>LawnGame</find>
     </findStrings>
     <replaceStrings>
       <replace>2</replace>
@@ -155,12 +155,12 @@
         <option value="$PROJECT_DIR$/src/styles/main.css" />
         <option value="$PROJECT_DIR$/src/scripts/html5Video.js" />
         <option value="$PROJECT_DIR$/src/scripts/objectDemo.js" />
-        <option value="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" />
         <option value="$PROJECT_DIR$/src/pages/LawnGame.html" />
         <option value="$PROJECT_DIR$/src/styles/canvas.css" />
         <option value="$PROJECT_DIR$/src/scripts/canvasDemo.js" />
         <option value="$PROJECT_DIR$/src/scripts/JSONDemo.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" />
       </list>
     </option>
   </component>
@@ -280,7 +280,7 @@
       <workItem from="1560352678352" duration="40431000" />
       <workItem from="1560722078517" duration="599000" />
       <workItem from="1560868252618" duration="1266000" />
-      <workItem from="1560966962228" duration="50034000" />
+      <workItem from="1560966962228" duration="50753000" />
     </task>
     <task id="LOCAL-00001" summary="Before DOM work">
       <created>1558012441069</created>
@@ -415,11 +415,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561167505418</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Updated index">
+      <created>1561167887079</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1561167887079</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="197691000" />
+    <option name="totallyTimeSpent" value="198410000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -434,7 +441,7 @@
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49880096" visible="true" weight="0.17473525" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49880096" visible="true" weight="0.17473525" />
       <window_info id="Structure" order="1" sideWeight="0.50119907" side_tool="true" weight="0.29425114" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -453,7 +460,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32850242" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32850242" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32850242" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.32850242" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" weight="0.32850242" />
@@ -534,7 +541,9 @@
     <MESSAGE value="Clean up code for compiler warnings" />
     <MESSAGE value="Added CSS transitions, transforms, and canvas." />
     <MESSAGE value="Additional work on mousestart, mouseend, and animations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Additional work on mousestart, mouseend, and animations." />
+    <MESSAGE value="Updated index" />
+    <MESSAGE value="Updated link to LawnGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated link to LawnGame" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/css/main.xsl" />
@@ -635,13 +644,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="36" column="9" selection-start-line="36" selection-start-column="9" selection-end-line="36" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/JSONDemo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -660,6 +662,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
         </state>
       </provider>
     </entry>
