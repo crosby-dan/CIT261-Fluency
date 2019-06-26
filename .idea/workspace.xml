@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="Added additional animation to home page">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/JSONDemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JSONDemo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/objectDemo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/objectDemo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/main.css" afterDir="false" />
-    </list>
+    <list default="true" id="c2b913aa-107f-4e5b-8d59-7c1d28607ac1" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +31,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
-              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pages/JSONDemo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -61,6 +63,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="799">
               <caret line="47" selection-start-line="47" selection-end-line="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="123">
+              <caret line="245" column="8" selection-start-line="245" selection-start-column="8" selection-end-line="245" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -141,9 +152,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/src/pages/LawnGame.html" />
         <option value="$PROJECT_DIR$/src/pages/JSONDemo.html" />
-        <option value="$PROJECT_DIR$/src/scripts/objectDemo.js" />
         <option value="$PROJECT_DIR$/src/styles/main.css" />
         <option value="$PROJECT_DIR$/src/pages/JavaScriptObjects.html" />
+        <option value="$PROJECT_DIR$/src/scripts/objectDemo.js" />
       </list>
     </option>
   </component>
@@ -258,7 +269,7 @@
       <workItem from="1560722078517" duration="599000" />
       <workItem from="1560868252618" duration="1266000" />
       <workItem from="1560966962228" duration="52770000" />
-      <workItem from="1561412420582" duration="10925000" />
+      <workItem from="1561412420582" duration="12214000" />
     </task>
     <task id="LOCAL-00001" summary="Before DOM work">
       <created>1558012441069</created>
@@ -421,11 +432,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561179105525</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Added additional animation to home page">
+      <created>1561527048153</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1561527048153</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211352000" />
+    <option name="totallyTimeSpent" value="212641000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -602,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pages/JSONDemo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/canvas.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1010">
@@ -630,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="173" selection-start-line="173" selection-end-line="173" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/scripts/cssFormatDemo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -654,7 +658,21 @@
     <entry file="file://$PROJECT_DIR$/src/pages/JavaScriptObjects.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
-          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pages/JSONDemo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scripts/objectDemo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="245" column="8" selection-start-line="245" selection-start-column="8" selection-end-line="245" selection-end-column="8" />
         </state>
       </provider>
     </entry>
