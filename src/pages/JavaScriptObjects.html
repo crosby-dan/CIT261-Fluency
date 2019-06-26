@@ -5,10 +5,21 @@
     <link rel="stylesheet" href="../styles/main.css">
     <link rel="stylesheet" href="../styles/canvas.css">
     <script src="../scripts/util.js"></script>
-    <title>Dan Crosby CIT 261 Fluency Demonstration - JavaScript Objects</title>
+    <title>Dan Crosby CIT 261 Pets Site</title>
 </head>
 <body>
-<H1>Dan Crosby CIT 261 Pets Site</H1>
+
+<div>
+<div>
+<H2 class="title">Dan Crosby CIT 261 Pets Site</H2>
+</div>
+
+<div class="view animdemo">
+    <img src="../img/allpets.jpg" width="200px" alt="">
+    <div class="mask">
+        <a href="https://www.petfinder.com" class="info">Find your local pound</a>
+    </div>
+</div>
 <fieldset>
     <label for="inputPetName">Enter pet name</label>
     <input type="text" id="inputPetName" name="inputPetName">
@@ -37,8 +48,8 @@
         <source id="mp3Audio" type="audio/mpeg" src="">
     </audio>
 </fieldset>
+</div>
 <script src="../scripts/cssFormatDemo.js"></script>
-
 <div class="row">
     <div class="column">
         <H2>Pets at home</H2>
@@ -62,7 +73,7 @@
         <div id="timeout">
             <H2 id="timeoutmessage">Pet on timeout</H2>
             <img src="../img/pettimeout.jpg" class="pethomeimg" alt="Image of pet on timeout">
-            <button class="button2" onclick="RetrievePetFromTimeout();">Retrieve pet from timeout</button>
+            <button class="button2" onclick="RetrievePetFromTimeout();">Retrieve from timeout</button>
         </div>
     </div>
 </div>

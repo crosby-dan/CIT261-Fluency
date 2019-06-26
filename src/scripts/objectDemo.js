@@ -239,8 +239,20 @@ function addPetToList(pet,list) {
         e.currentTarget.parentNode.remove();
     }, false);
 
+    //If the list is empty, we will use AppendChild.
+    //If the list is NOT empty, we will demonstrate using AppendBefore.
+    listItems=document.getElementById(list).getElementsByTagName("li");
     // Append the node to the designated list
-    document.getElementById(list).appendChild(node);
+    if (listItems.length==0) {
+        console.log('adding using appendChild');
+        document.getElementById(list).appendChild(node);
+    }
+    else {
+        console.log('adding using appendBefore');
+        document.getElementById(list).insertBefore(node,listItems[0]);
+    }
+
+    //Play sounds based on added pet
     var audioplayer=document.getElementById("mp3Audio");
     audioplayer.src="../audio/" + pet.getAudio();
     var audiocontroller=document.getElementById("audioController");
