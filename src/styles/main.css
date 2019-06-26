@@ -129,7 +129,8 @@ ul {
     text-decoration: none;
     padding: 3px 10px;
     background: #333;
-    color: #fff;
+    opacity: 0;
+    color: red;
 }
 
 .view img {
@@ -142,8 +143,6 @@ ul {
 }
 
 .animdemo a.info{
-    opacity: 0;
-    color: red;
     transition: all 0.8s ease-in;
 }
 
