@@ -5,7 +5,7 @@ var canvas = document.getElementById('viewport'),
     context = canvas.getContext('2d');
 
 make_base();
-setTimeout(function(){ make_poo(); },Math.trunc(Math.random()*1500));
+setTimeout(function(){ make_poo(); },4000+Math.trunc(Math.random()*1500));
 
 function make_base()
 {
