@@ -30,10 +30,15 @@ function make_poo() {
     //Update status message for success
     var status=document.getElementById("statusBar");
     if (status.innerHTML.substr(1,9)!="Your pets") {
-        status.innerHTML="Your pets have done it again, scoop the poop!";
+        status.innerHTML="Scoop the poop!";
         status.setAttribute("class","bad");
     }
-
+    //Play sounds based on added pet
+    var audioplayer=document.getElementById("mp3Audio");
+    audioplayer.src="../audio/poop.mp3";
+    var audiocontroller=document.getElementById("audioController");
+    audiocontroller.load();
+    audiocontroller.play();
 }
 
 function get_poo(x,y) {
@@ -66,8 +71,15 @@ function dispose_poo() {
     status.backgroundClip="Transparent";
     status.style.scale=1;*/
 
+    //Play sounds based on added pet
+    var audioplayer=document.getElementById("mp3Audio");
+    audioplayer.src="../audio/swoosh.mp3";
+    var audiocontroller=document.getElementById("audioController");
+    audiocontroller.load();
+    audiocontroller.play();
+
     //Add a small delay to make it more challenging to locate the next poop!
-    setTimeout(function(){ make_poo(); },Math.trunc(Math.random()*4000));
+    setTimeout(function(){ make_poo(); },Math.trunc(Math.random()*5000));
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -126,3 +138,4 @@ document.getElementById("viewport").addEventListener("touchend", function(e) {
     console.log("Touch end");
     checkClicks(touch,"touchend");
 });
+

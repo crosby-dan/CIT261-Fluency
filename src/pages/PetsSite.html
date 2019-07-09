@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../styles/grid.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/marquee.css">
+
+    <script src="../scripts/util.js"></script>
+    <title>Dan Crosby CIT 261 Pets Site</title>
+</head>
+<body>
+
+<div>
+    <div class="grid-container">
+        <div class="view animdemo banner">
+            <img src="../img/allpets.jpg" width="200px" alt="">
+            <div class="mask">
+                <a href="https://www.petfinder.com" class="info">Find your local pound</a>
+            </div>
+        </div>
+        <div class="title">
+            <H2>Dan Crosby CIT 261 Pets Site</H2>
+            <div class="marquee">
+                <div>
+                    <span id="statusBar" class="good">Welcome to your home for adopted pets. <a href="FirstTime.html">Instructions</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="createPet">
+            <h3 class="gridTitle">Adopt a Pet!</h3>
+            <label for="inputPetName">Input Name:</label>
+            <input type="text" id="inputPetName" name="inputPetName">
+            <label for="inputPetType">Select Pet Type:</label>
+            <input id="inputPetType" type="image" src="../img/dog.jpg" alt="Create Dog" width="48" height="48" onclick="createPet('Dog');">
+            <input type="image" src="../img/barkingdog.jpg" alt="Create Barking Dog" width="48" height="48" onclick="createPet('BarkingDog');">
+            <input type="image" src="../img/cat.jpg" alt="Create Cat" width="48" height="48" onclick="createPet('Cat');">
+            <input type="image" src="../img/meancat.jpg" alt="Create Mean Cat" width="48" height="48" onclick="createPet('ScratchingCat');">
+        </div>
+        <div class="theater">
+            <button id="showtheater" onclick="toggleTheater();">Show/Hide Pet Theater</button>
+            <div id="wrapper">
+                <H2 id="videomessage">Pet Theater</H2>
+                <video id="tomjerry" width="160px" controls>
+                    <source src="../img/Tom_And_Jerry.mp4" type="video/mp4">
+                </video><br>
+                <button id="playpause" onclick="playPause()">Play/Pause</button>
+                <button id="playbig" onclick="playerBig()">Big</button>
+                <button id="playsmall" onclick="playerCompact()">Small</button>
+            </div>
+        </div>
+        <div id="timeout">
+            <H2 id="timeoutmessage" class="gridTitle">Pet on timeout</H2>
+            <img src="../img/pettimeout.jpg" class="pethomeimg" alt="Image of pet on timeout">
+            <button class="button2" onclick="RetrievePetFromTimeout();">Retrieve from timeout</button>
+        </div>
+        <div id="hotel">
+            <H2 id="hotelmessage" class="gridTitle">Pets Chilling at Pet Hotel</H2>
+            <img src="../img/pethotel.jpg" class="pethomeimg" alt="Image of pet hotel">
+            <button class="button2" onclick="RetrievePetsFromHotel();">Retrieve pets from hotel</button>
+        </div>
+        <div class="backyard">
+            <H2 id="backyardmessage" class="gridTitle">Backyard</H2>
+            <img src="../img/grass2.jpg" alt="backyard" width="150" onclick="pauseGame()">
+        </div>
+        <div class="home">
+            <H2 class="gridTitle">Pets at home</H2>
+            <UL id="petObjectsHome" class="flex-container"></UL>
+        </div>
+    </div>
+    <audio id="audioController">
+        <source id="mp3Audio" type="audio/mpeg" src="">
+    </audio>
+</div>
+<script src="../scripts/managePets.js"></script>
+<script src="../scripts/html5Video.js"></script>
+<script src="../scripts/hungryPets.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+.title { grid-area: header; }
+.banner { grid-area: banner; }
+.createPet { grid-area: menu; }
+.theater { grid-area: theater; }
+.timeout { grid-area: timeout; }
+.hotel { grid-area: hotel; }
+.backyard { grid-area: backyard; }
+.home { grid-area: main; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+            'banner header header header header'
+            'menu timeout hotel theater backyard'
+            'main main main main main';
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    grid-template-columns: 220px auto auto auto;
+}
+
+.grid-container > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 5px;
+}

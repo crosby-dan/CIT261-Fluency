@@ -1,0 +1,49 @@
+/*
+//These are in the canvas and main classes since these attributes vary by form design.
+.marquee {
+    position:absolute; top:511px; left:20px;
+    height: 40px;
+    width: 1460px;
+
+    overflow: hidden;
+    !*position: relative;*!
+}
+*/
+
+.marquee div {
+    display: block;
+    width: 100%;
+    height: 40px;
+
+    position: relative;
+    overflow: hidden;
+
+    animation: marquee 5s linear infinite;
+}
+
+.marquee span {
+    float: left;
+    width: 60%;
+}
+
+@keyframes marquee {
+    0% { left: 0; }
+    100% { left:20%; }
+}
+
+.bad {
+    transition: all .8s linear 0s;
+    color:tomato;
+    font-weight: bold;
+    font-size: 1.8em;
+    transform: skewX(15deg);
+}
+
+.good {
+    transition: all .5s linear 0s;
+    color:initial;
+    font-weight: initial;
+    background-color: initial;
+    font-size: 1.5em;
+    transform: skewX(1deg);
+}

@@ -12,20 +12,9 @@ ul {
     padding-top: 25px;
 }
 
-.flex-container {
-    display:flex;
-    flex-direction: row;
-    flex-shrink: initial;
-    align-content: flex-start;
-    flex-wrap: wrap;
-    padding: 2px;
-    column-count: 2;
-    height:50vw;
-}
-
-.flex-container li{
+label {
     display: block;
-    padding: 6px;
+    padding: 2px;
 }
 
 .button {
@@ -40,19 +29,6 @@ ul {
     text-shadow:   2px 2px #000000;
 }
 
-.column {
-    float: left;
-    width: 70%;
-    border-color: #FFF;
-    clear: both
-}
-
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
 .pethomeimg {
     max-height: 150px;
     max-width: 150px;
@@ -80,6 +56,7 @@ ul {
     background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
     background-color:#ffab23;
 }
+
 .button2:active {
     position:relative;
     top:1px;
@@ -98,15 +75,9 @@ ul {
     overflow:hidden;
 }
 
-.title {
-    display:block;
-    font-size: 20px;
-}
-
 .view {
     float:left;
     height: 120px;
-    margin-right: 15px;
     display:block;
     overflow: hidden;
     position: relative;
@@ -116,7 +87,7 @@ ul {
 }
 
 .view .mask, .view .content {
-    width: 200px;
+    width: 220px;
     height: 100px;
     position: absolute;
     overflow: hidden;
@@ -160,4 +131,82 @@ ul {
 
 .clearfix {
     overflow: auto;
+}
+
+.gridTitle {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 0;
+    word-spacing: 2px;
+    color: #FF8336;
+    font-weight: normal;
+    text-decoration: none solid rgb(68, 68, 68);
+    font-style: italic;
+    font-variant: small-caps;
+    text-transform: none;
+}
+
+.flex-container {
+    display:flex;
+    flex-direction: row;
+    flex-shrink: initial;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 2px;
+    column-count: 2;
+    height:50vw;
+}
+
+.flex-container li{
+    display: block;
+    padding: 6px;
+}
+
+.marquee {
+    height: 40px;
+    width: 960px;
+
+    overflow: hidden;
+    /*position: relative;*/
+}
+
+.createPet input {
+    border-radius: 5px;
+}
+
+.petImage {
+    border-radius: 2em;
+    transition: all .5s ease-in-out;
+}
+
+.Hungry {
+    background-color: coral;
+    color: red;
+}
+
+.notHungry {
+    transition: all .5s ease 0.1s;
+}
+
+.food {
+    position: relative;
+    left: 30px;
+    top: -80px;
+    border-radius: 10em;
+    margin: 0;
+    border-style: double;
+    border-color: #9e9e9e;
+    box-shadow: 5px 6px;
+    transition: all .3s ease-out;
+}
+
+.food:hover {
+    transition: all .4s ease-in 0s;
+    transform: skew(10deg);
+    border-radius: 5em;
+    margin: 0;
+    border-style: double;
+    border-color: black;
+    box-shadow: 8px 9px;
 }
