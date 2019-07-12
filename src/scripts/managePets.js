@@ -99,6 +99,7 @@ Dog.prototype.getAudioEating = function() {
 //Run this after all DOM elements are loaded so that we can display any local storage cache.
 document.addEventListener("DOMContentLoaded", function(){
     console.log("Page loaded");
+    LoadPetNamesFromWeb();
 
     //If there are already pets in the hotel, we need to make this visible and show the count.
     var hotel = localStorage.getItem("PetHotel");
@@ -146,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 function createPet(type) {
     //Validate the pet name which must be present
+    console.log(document.getElementById("inputPetName"));
     var sPetName=document.getElementById("inputPetName").value;
     if (sPetName.length===0)
     {
@@ -174,7 +176,7 @@ var looper;
 var degrees = 0;
 function rotateImage(el,speed) {
     var elem =document.getElementById(el);
-    console.log(el + " : " + degrees + " : " + speed);
+    /*console.log(el + " : " + degrees + " : " + speed);*/
     elem.style.transform = "rotate("+degrees+"deg)";
     speed=speed-0.15;
     if (speed>10) {
@@ -424,7 +426,7 @@ function isDuplicateName(petName) {
     }
 
     //Check to see if pet name is already in the hotel
-    var list=localStorage.getItem("PetHotel");
+    list=localStorage.getItem("PetHotel");
     if (list>"") {
         list=JSON.parse(list);
         list.forEach(function(item) {
@@ -448,4 +450,31 @@ function pauseGame() {
     var elem=document.getElementById("petObjectsHome");
     elem.remove();
     window.open('LawnGame.html');
+}
+
+function LoadPetNamesFromWeb() {
+    var request = new XMLHttpRequest();
+    var requestURL = 'https://pokeapi.co/api/v2/pokemon/';
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+    request.onload = function() {
+        console.log ("running Load names from web");
+        var jsonObj=request.response;
+        var sel = document.getElementById("inputPetName");
+
+        for (i=0; i<jsonObj.results.length; i++) {
+            option = document.createElement('option');
+            option.text = jsonObj.results[i].name;
+            //option.value = i+1;
+            option.value = jsonObj.results[i].name;
+            sel.add(option);
+        }
+
+        for (var key in jsonObj[0]) {
+            if (jsonObj[0].hasOwnProperty(key)) {
+                console.log(key + " -> " + jsonObj[0][key]);
+            }
+        }
+    }
 }
